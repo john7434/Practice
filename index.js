@@ -1,9 +1,4 @@
-import Navigo from "navigo";
-import { capitalize } from "lodash";
-import * as state from "./store";
-import { Header, Nav, Main, Footer } from "./components";
-import axios from "axios";
-import "./env";
+
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
@@ -14,7 +9,12 @@ axios
       // add it to state.Blog.posts
       state.Blog.posts.push(post);
     });
-    const params = router.lastRouteResolved().params;
+    const params = router.lastRoimport Navigo from "navigo";
+import { capitalize } from "lodash";
+import * as state from "./store";
+import { Header, Nav, Main, Footer } from "./components";
+import axios from "axios";
+import "./env";uteResolved().params;
     if (params) {
       render(state[params.page]);
     }
